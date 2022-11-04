@@ -1,3 +1,3 @@
 <template>
-  <span>Hello Vite + vite-ssg</span>
+  <router-view />
 </template>

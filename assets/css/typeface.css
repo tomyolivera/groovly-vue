@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url('assets/fonts/Satoshi-Variable.woff2') format('woff2 supports variations'),
+       url('assets/fonts/Satoshi-Variable.woff2') format('woff2-variations'),
+       url('assets/fonts/Satoshi-Regular.woff2') format('woff2'),
+       url('assets/fonts/Satoshi-Regular.ttf') format('truetype');
+}
+
+:root {
+  --primary-font: Satoshi, sans-serif;
+}
