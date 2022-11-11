@@ -1,23 +1,21 @@
 <template lang="">
-    <div>
-        <h1>GROOVLY!</h1>
+    <div class="background">
+        <img src="../../../assets/img/Wordmark.png" style="position: absolute;top: 10%;" />
 
+        <defaultText text="Create your account" style="position: absolute;top: 30%;"/>
         <form>
-            <input placeholder="Username" />
-            <input placeholder="Password" />
-            <button class="btn">SIGN IN</button>
+            <defaultInput placeholder="Name..." />
+            <defaultInput placeholder="Email..." />
+            <defaultBtn text="Next" to="/auth/login" />
         </form>
-
-        <div class="other-options">
-            <a href="#">CREATE ACCOUNT</a>
-            <span>or</span>
-            <a href="#">SIGN IN WITH METAMASK</a>
-        </div>
     </div>
 </template>
 
 <script lang="tsx">
 import Form from '../../components/Form.vue'
+import defaultBtn from '../../components/defaultBtn.vue'
+import defaultText from '../../components/defaultText.vue'
+import defaultInput from '../../components/defaultInput.vue'
 
 export default {
     
@@ -26,29 +24,15 @@ export default {
 
 <style scoped>
     form {
+        height:25%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
     }
     .other-options{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .btn {
-        font-family: 'Comfortaa';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        outline: none;
-        border: none;
-        border-radius: 3px 0px 0px 3px;
-        background: #00CCFF;
-        width: 320px;
-        height: 45px;
-        cursor: pointer;
     }
 </style>

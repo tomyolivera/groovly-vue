@@ -1,8 +1,8 @@
 <template lang="">
   
   <div class="background">
-    <defaultText text="Last Step" style="position: absolute;top: 15%;"/>
-      <img src="../../assets/img/MetaMask_Fox.png" style="position: absolute;top: 30%;" />
+    <defaultText text="Last Step..." style="position: absolute;top: 24%;"/>
+      <img src="../../assets/img/MetaMask_Fox.png" style="position: absolute;top: 35%;" />
       <defaultBtn text="Connect Metamask" to="/auth/login" style="position: absolute;top: 60%;"/>
       
   </div>
