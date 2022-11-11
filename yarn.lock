@@ -39,6 +39,18 @@
   dependencies:
     "@iconify/types" "^2.0.0"
 
+"@iconify/types@^2.0.0":
+  "integrity" "sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg=="
+  "resolved" "https://registry.npmjs.org/@iconify/types/-/types-2.0.0.tgz"
+  "version" "2.0.0"
+
+"@iconify/vue@^4.0.0":
+  "integrity" "sha512-73z81Yf2HISfehu3qvN9GqL1OnUO7wEMKkiFwVGJ2pqAdGCR8FrVylhRhka+6U+gFLlng0ynnT20svk3jJYwow=="
+  "resolved" "https://registry.npmjs.org/@iconify/vue/-/vue-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "@iconify/types" "^2.0.0"
+
 "@mdit-vue/plugin-component@^0.11.1":
   version "0.11.1"
   resolved "https://registry.npmjs.org/@mdit-vue/plugin-component/-/plugin-component-0.11.1.tgz"
@@ -2097,6 +2109,7 @@ vue@^3.2.37:
   version "3.2.41"
   resolved "https://registry.npmjs.org/vue/-/vue-3.2.41.tgz"
   integrity sha512-uuuvnrDXEeZ9VUPljgHkqB5IaVO8SxhPpqF2eWOukVrBnRBx2THPSGQBnVRt0GrIG1gvCmFXMGbd7FqcT1ixNQ==
+
   dependencies:
     "@vue/compiler-dom" "3.2.41"
     "@vue/compiler-sfc" "3.2.41"

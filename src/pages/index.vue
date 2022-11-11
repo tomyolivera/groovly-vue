@@ -9,8 +9,6 @@
 </template>
 
 <script lang="tsx">
-import defaultBtn from '../../components/defaultBtn.vue'
-import defaultText from '../../components/defaultText.vue'
 
 export default {
   
