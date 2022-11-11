@@ -6,16 +6,14 @@
         <form>
             <defaultInput placeholder="Name..." />
             <defaultInput placeholder="Email..." />
-            <defaultBtn text="Next" to="/auth/login" />
+            <defaultBtn text="Next" to="/music-form" />
         </form>
+        <defaultLink text="ALREADY HAVE AN ACCOUNT? LOGIN" style="position: absolute;top: 80%;"/>
     </div>
 </template>
 
 <script lang="tsx">
 import Form from '../../components/Form.vue'
-import defaultBtn from '../../components/defaultBtn.vue'
-import defaultText from '../../components/defaultText.vue'
-import defaultInput from '../../components/defaultInput.vue'
 
 export default {
     
