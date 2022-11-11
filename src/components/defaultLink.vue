@@ -1,5 +1,6 @@
 <template lang="">
-    <a class="link">{{text}}</a>
+
+    <router-link :to="to" ><p class="link">{{text}}</p></router-link >
 </template>
 
 <script lang="tsx">
@@ -9,6 +10,10 @@ export default {
         text: {
             type: String,
             default: 'text'
+        },
+        to: {
+            type: String,
+            default: '/'
         }
     }
 }
@@ -19,7 +24,7 @@ export default {
     font-family: 'Comfortaa';
 font-style: normal;
 font-weight: 400;
-font-size: 11px;
+font-size: 13px;
 line-height: 200%;
 /* identical to box height, or 22px */
 
