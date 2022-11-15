@@ -35,6 +35,6 @@ letter-spacing: 0.06em;
 text-decoration-line: underline;
 font-feature-settings: 'pnum' on, 'onum' on;
 
-color: #DBA0FF;
+color: var(--main-color-light);
 }
 </style>

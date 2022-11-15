@@ -1,7 +1,7 @@
 <template lang="">
   
   <div class="background">
-    <defaultText text="Last Step..." style="position: absolute;top: 24%;"/>
+    <defaultText text="Register with metamask" style="position: absolute;top: 24%;"/>
       <img src="../../assets/img/MetaMask_Fox.png" style="position: absolute;top: 35%;" />
       <defaultBtn text="Connect Metamask" to="/auth/register" style="position: absolute;top: 60%;"/>
       

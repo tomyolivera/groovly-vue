@@ -10,7 +10,7 @@
 
 <script lang="tsx">
 import { ShowInterface } from '@/interfaces/ShowInterface';
-import moment from 'moment'
+import moment from 'moment';
 import LikeBtn from './LikeBtn.vue';
 
 

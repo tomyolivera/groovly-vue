@@ -73,7 +73,7 @@ export default {
     .rectangle {
         width: 90%;
         height: 10px;
-        background: #8E3AED;
+        background: var(--main-color-dark);
         border-radius: 0 0 8px 8px;
         /* margin: auto; */
         position: absolute;

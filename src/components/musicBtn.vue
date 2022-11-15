@@ -1,18 +1,19 @@
 <template lang="">
-    <button v-on:click="toggleActive" :class="btnActive" ><Icon :class="iconActive" :icon="icon" /><h4 class="text">{{text}}</h4></button>
+    <button class="music-btn" @click="onClick" :id="isSelected ? 'btn-selected':''" >
+    <Icon class="music-icon"  :icon="icon" :color="isSelected ? '#2B2837':'var(--main-color-dark)'"/>
+    <h4 class="text">{{text}}</h4>
+    </button>
 </template>
 
 <script lang="tsx">
 import { Icon } from '@iconify/vue';
 export default {
     name: 'musicBtn',
-    data(){
-        return{
-            btnActive: 'btn btn-off',
-            iconActive: 'icon icon-off',
-            active: false
+    data() {
+        return {
+            isSelected: false
         }
-  
+
     },
     props: {
         text: {
@@ -22,28 +23,28 @@ export default {
         icon: {
             type: String,
             default: 'emojione-monotone:guitar'
-    }}, components: {
+        },
+        likeList: {
+            type: Array,
+            default: []
+        }
+    }, components: {
         Icon
-    }, 
-    methods: {
-        toggleActive() {
-            if(this.active == false){
-                this.btnActive = 'btn btn-on'
-                this.iconActive = 'icon icon-on'
-                this.active = true
-            }else{
-                this.btnActive = 'btn btn-off'
-                this.iconActive = 'icon icon-off'
-                this.active = false
+    }, methods: {
+        onClick() {
+            this.isSelected = !this.isSelected
+            if (this.isSelected) {
+                this.likeList.push(this.text)
+            } else {
+                this.likeList.splice(this.likeList.indexOf(this.text), 1)
             }
-
         }
     }
 }
 </script>
 
 <style scoped>
-.btn {
+.music-btn {
     border-radius: 100%;
     width: 85px;
     height: 85px;
@@ -57,20 +58,14 @@ export default {
     padding: 0px;
     gap: 5px;
     border: 2px solid transparent;
-}
-.btn-off{
     background: #2B2837;
 }
-.btn-on{
-    background: #8E3AED;
+
+#btn-selected {
+    background: var(--main-color-dark);
 }
-.icon-off{
-    color: #8E3AED;
-}
-.icon-on{
-    color: #2B2837;
-}
-.icon {
+
+.music-icon {
     width: 37px;
     height: 37px;
 }
@@ -81,7 +76,6 @@ export default {
     font-weight: 400;
     font-size: 9px;
     line-height: 14px;
-    /* identical to box height */
 
     display: flex;
     align-items: center;
@@ -92,7 +86,7 @@ export default {
     color: #FFFFFF;
 
 
-    /* Inside auto layout */
+
 
     flex: none;
     order: 1;

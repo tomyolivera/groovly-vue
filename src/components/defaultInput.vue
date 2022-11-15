@@ -20,8 +20,8 @@ export default {
     height: 43px;
     border: double 2px transparent;
     border-radius: 5px;
-    background-image: linear-gradient(#121212, #121212),
-        linear-gradient(to right, #B149F1, #8E3AED);
+    background-image: linear-gradient(var(--background-color), var(--background-color)),
+        linear-gradient(to right, var(--main-color), var(--main-color-dark));
     background-origin: border-box;
     background-clip: content-box, border-box;
     text-decoration: none;

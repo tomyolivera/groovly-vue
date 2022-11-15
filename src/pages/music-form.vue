@@ -5,10 +5,10 @@
         
 
             <div  class="music-grid">
-                <musicBtn v-for="item in music" :text="item.text" :icon="item.icon"/>
+                <musicBtn v-for="item in music" :text="item.text" :icon="item.icon" :likeList="likeList"/>
             </div>
-            <defaultBtn text="Next" to="profile/index" style="position: absolute;top: 80%;"/>
-            <defaultLink text="SKIP THIS STEP" to="/profile/index" style="position: absolute;top: 90%;"/>
+            <defaultBtn text="Next" to="/home" style="position: absolute;top: 80%;"/>
+            <defaultLink text="SKIP THIS STEP" to="/home" style="position: absolute;top: 90%;"/>
 
     </div>
 </template>
@@ -26,7 +26,8 @@ export default {
                 {text:"Jazz",icon:"wpf:herald-trumpet"},
                 {text:"Metal",icon:"bi:lightning-fill"},
                 {text:"Country",icon:"game-icons:farm-tractor"},
-            ]
+            ],
+            likeList:[]
         }
     }
 }

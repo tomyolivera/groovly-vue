@@ -4,6 +4,10 @@
 /* STYLES GLOBAL CONFIGURATION */
 :root {
   --background-color: #121212;
+  --text-color: #FCFCFC;
+  --main-color:#B149F1;
+  --main-color-dark:#8E3AED;
+  --main-color-light:#DBA0FF;
 }
 
 /* DOCUMENT STYLES */

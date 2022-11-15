@@ -21,7 +21,7 @@ export default {
     },
     computed: {
         color() {
-            return this.isLiked ? "#b149f1" : "#FEFDFF"
+            return this.isLiked ? "var(--main-color)" : "#FEFDFF"
         }
     },
     components: {

@@ -28,6 +28,6 @@ export default {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 
-    color: #FCFCFC;
+    color: var(--text-color);
 }
 </style>
