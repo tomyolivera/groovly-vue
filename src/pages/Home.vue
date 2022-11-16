@@ -1,5 +1,7 @@
 <template lang="">
-    <div class="background">
+    <div class="container">
+        <img src="../../assets/img/banner.png" class="banner"/>
+        <SearchBar/>
         <shows :shows="showsList" showsListName="Shows in your city" />
         <shows :shows="showsList" showsListName="Upcoming shows" />
     </div>
@@ -7,6 +9,8 @@
 
 <script lang="tsx">
 import Shows from '../components/Shows/Shows.vue'
+import SearchBar from '../components/SearchBar.vue'
+
 import { dbShows } from '../lib/dbShows.js'
 
 
@@ -20,5 +24,16 @@ export default {
 </script>
 
 <style scoped>
+    .banner {
+        width: 128.1px;
+        height: 35.32px;
+        filter: drop-shadow(1px 1px 20px #AF48F1);
+        margin: 30px 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
     
 </style>
