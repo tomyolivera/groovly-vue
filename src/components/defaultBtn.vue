@@ -22,7 +22,7 @@ export default {
 .btn {
     width: 198px;
     height: 43px;
-    background: linear-gradient(90deg, var(--main-color) 0%, var(--main-color-dark) 96.51%);
+    background: linear-gradient(90deg, var(--main-color) 0.01%, var(--main-color-dark) 99.9%);
     border-radius: 5px;
     display: flex;
     justify-content: center;

@@ -60,7 +60,7 @@ export default {
         font-size: 12px;
         line-height: 18px;
         text-decoration: none;
-        color: #A995CE;
+        color: #60A9D2;
     }
 
     .tools {

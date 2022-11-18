@@ -27,7 +27,7 @@ export default {
     .banner {
         width: 128.1px;
         height: 35.32px;
-        filter: drop-shadow(1px 1px 20px #AF48F1);
+        filter: drop-shadow(1px 1px 20px var(--main-color));
         margin: 30px 0;
     }
     .container {

@@ -48,7 +48,7 @@ export default {
     border-radius: 100%;
     width: 85px;
     height: 85px;
-    box-shadow: -2px -2px 15px rgba(142, 58, 237, 0.8), 5px 5px 15px #14121E;
+    box-shadow: -2px -2px 15px rgba(63, 116, 255, 0.8), 5px 5px 15px #14121E;
     filter: blur(0.5px);
     display: flex;
     justify-content: center;
