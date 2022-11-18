@@ -1,20 +1,25 @@
 <template lang="">
-    <div class="container">
+
+        <div class="container">
         <img src="../../assets/img/banner.png" class="banner"/>
         <SearchBar/>
         <shows :shows="showsList" showsListName="Shows in your city" />
         <shows :shows="showsList" showsListName="Upcoming shows" />
     </div>
+
+        <navbar/>
+
 </template>
 
 <script lang="tsx">
-import Shows from '../components/Shows/Shows.vue'
-import SearchBar from '../components/SearchBar.vue'
 
 import { dbShows } from '../lib/dbShows.js'
 
 
+
+
 export default {
+
     data: () => {
         return {
             showsList: dbShows

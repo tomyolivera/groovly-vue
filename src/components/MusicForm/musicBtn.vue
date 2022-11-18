@@ -1,6 +1,6 @@
 <template lang="">
     <button class="music-btn" @click="onClick" :id="isSelected ? 'btn-selected':''" >
-    <Icon class="music-icon"  :icon="icon" :color="isSelected ? '#2B2837':'var(--main-color-dark)'"/>
+    <Icon class="music-icon"  :icon="icon" :color="isSelected ? '#FFFFFF':'var(--main-color-dark)'"/>
     <h4 class="text">{{text}}</h4>
     </button>
 </template>
@@ -59,15 +59,20 @@ export default {
     gap: 5px;
     border: 2px solid transparent;
     background: #2B2837;
+
 }
 
 #btn-selected {
-    background: var(--main-color-dark);
+    background: linear-gradient(#00D8E7 0%, #3F74FF 54.69%, #1C3A8A 98.96%) !important;
+    box-shadow: -2px -2px 15px rgba(152, 152, 152, 0.8), 5px 5px 15px #14121E;
+    border: 2px solid #00D8E7;
+    
 }
 
 .music-icon {
     width: 37px;
     height: 37px;
+    filter: blur(0.25px);
 }
 
 .text {

@@ -1,7 +1,4 @@
 <template>
-
-  
-
   <router-view v-slot="{ Component }">
   <transition name="fade">
     <component :is="Component" />
@@ -11,7 +8,6 @@
 </template>
 
 <script>
-    import SplashScreen from './components/SplashScreen.vue'
 
     export default {
         name: "app",

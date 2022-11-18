@@ -36,7 +36,7 @@ export default {
     .music-grid{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 15px;
+        grid-gap: 20px;
         position: absolute;
         top: 25%;
         width: 300px;
