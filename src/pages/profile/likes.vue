@@ -1,5 +1,5 @@
 <template lang="">
-    <div class="background">
+    <div>
         <p class="yl">Your Likes</p>
         <likes-show />
     </div>
