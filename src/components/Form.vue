@@ -4,16 +4,14 @@
     </form>
 </template>
 
-<script lang="ts">
-export default {
-    name: 'Form',
-    props: {
-        fields: {
-            type: Array,
+<script setup lang="ts">
+
+    const props = defineProps({
+        placeholder: {
+            type: String,
             required: true
         }
-    }
-}
+    })
 </script>
 
 <style scoped>

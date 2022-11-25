@@ -5,42 +5,40 @@
     </button>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { Icon } from '@iconify/vue';
-export default {
-    name: 'musicBtn',
-    data() {
-        return {
-            isSelected: false
-        }
+import { defineProps } from 'vue';
 
+const isSelected = $ref({state:false});
+
+const props = defineProps({
+    text: {
+        type: String,
+        required: true
     },
-    props: {
-        text: {
-            type: String,
-            default: 'Rock'
-        },
-        icon: {
-            type: String,
-            default: 'emojione-monotone:guitar'
-        },
-        likeList: {
-            type: Array,
-            default: []
-        }
-    }, components: {
-        Icon
-    }, methods: {
-        onClick() {
-            this.isSelected = !this.isSelected
-            if (this.isSelected) {
-                this.likeList.push(this.text)
-            } else {
-                this.likeList.splice(this.likeList.indexOf(this.text), 1)
-            }
-        }
+    icon: {
+        type: String,
+        required: true
+    },
+    likeList: {
+        type: Array,
+        required: true
     }
-}
+})
+
+
+        const onClick = () => {
+            isSelected.state = !isSelected.state
+
+            if (isSelected.state) {
+                props.likeList.push(props.text)
+            } else {
+                props.likeList.splice(props.likeList.indexOf(props.text), 1)
+            }
+            console.log(props.likeList)
+        }
+    
+
 </script>
 
 <style scoped>

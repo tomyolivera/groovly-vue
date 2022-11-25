@@ -2,20 +2,17 @@
     <router-link :to="to" class="btn" ><span class="btn-text">{{text}}</span></router-link >
 </template>
 
-<script lang="ts">
-export default {
-    name: 'defaultBtn',
-    props: {
+<script setup lang="ts">
+    const props = defineProps({
         text: {
             type: String,
-            default: 'button'
+            required: true
         },
         to: {
             type: String,
-            default: '/'
+            required: true
         }
-    }
-}
+    })
 </script>
 
 <style scoped>

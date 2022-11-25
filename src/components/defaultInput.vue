@@ -2,16 +2,15 @@
     <input class="input" :placeholder="placeholder" />
 </template>
 
-<script lang="ts">
-export default {
-    name: 'defaultInput',
-    props: {
+<script setup lang="ts">
+    
+    const props = defineProps({
         placeholder: {
             type: String,
-            default: 'button'
+            default: 'placeholder'
         }
-    }
-}
+    })
+
 </script>
 
 <style scoped>

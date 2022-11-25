@@ -12,13 +12,9 @@
 
     </div>
 </template>
-<script lang="ts">
-export default {
-    
+<script setup lang="ts">
 
-    data() {
-        return {
-            music:[
+    const music =[
                 {text:"Pop",icon:"game-icons:microphone"},
                 {text:"Rock",icon:"emojione-monotone:guitar"},
                 {text:"Trap",icon:"healthicons:i-groups-perspective-crowd-outline"},
@@ -28,11 +24,10 @@ export default {
                 {text:"Jazz",icon:"wpf:herald-trumpet"},
                 {text:"Metal",icon:"bi:lightning-fill"},
                 {text:"Country",icon:"game-icons:farm-tractor"},
-            ],
-            likeList:[]
-        }
-    }
-}
+            ]
+
+    let likeList =[]
+
 </script>
 <style scoped>
     .music-grid{

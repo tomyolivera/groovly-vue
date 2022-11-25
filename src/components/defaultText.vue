@@ -2,16 +2,13 @@
     <h4 class="text">{{text}}</h4>
 </template>
 
-<script lang="ts">
-export default {
-    name: 'defaultText',
-    props: {
-        text: {
-            type: String,
-            default: 'text'
-        }
+<script setup lang="ts">
+const props = defineProps({
+    text: {
+        type: String,
+        required: true
     }
-}
+})
 </script>
 
 <style scoped>

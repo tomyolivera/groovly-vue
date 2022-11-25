@@ -3,20 +3,17 @@
     <router-link :to="to" ><p class="link">{{text}}</p></router-link >
 </template>
 
-<script lang="ts">
-export default {
-    name: 'defaultLink',
-    props: {
+<script setup lang="ts">
+    const props = defineProps({
         text: {
             type: String,
-            default: 'text'
+            required: true
         },
         to: {
             type: String,
-            default: '/'
+            required: true
         }
-    }
-}
+    })
 </script>
 
 <style scoped>

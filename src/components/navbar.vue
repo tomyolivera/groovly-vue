@@ -8,26 +8,14 @@
     </div>
 </template>
 
-<script lang="ts">
-import { Icon } from '@iconify/vue';
+<script setup lang="ts">
 
-export default {
-    name: 'navbar',
-    props: {
-    },
-    components: {
-        Icon
-    },
-    data() {
-        return {
-            selected: 0
-        }
-    },
-    methods: {
-        onClick(index: number) {
-            this.selected = index
-        }
-    },
+var selected = 0;
+
+    const onClick = (index: number) => {
+        selected = index
+    }
+
 }
 </script>
 
