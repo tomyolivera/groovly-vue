@@ -4,16 +4,31 @@
 
     <div class="container">
         <div class="data">
-            <h2>Amelie Lens</h2>
-            <p>09/21/2022</p>
+            <h2 class="showTitle">Amelie Lens</h2>
+            <price-badge price="9.5"/>
         </div>
 
-        <div class="location">
-            <Icon icon="material-symbols:location-on-outline" color="#00D8E7"/>
-            <p>Movistar Arena</p>
-        </div>
+        
 
         <img src="../../../assets/img/nft.png" class="nft"/>
+
+        <div class="infoContainer">
+            <div class="infoBox">
+                <Icon icon="fluent:calendar-empty-16-regular" color="#00D8E7"/>
+                <p class="infoText">Viernes 21 de Diciembre - 22:00 hs</p>
+            </div>
+
+            <div class="infoBox spaceBetween">
+                <div class="infoBox--SubContainer">
+                    <Icon icon="material-symbols:location-on-outline" color="#00D8E7"/>
+                    <p class="infoText">Movistar Arena</p>
+                </div>
+                <a class="infoAncor">See map</a>
+
+            </div>
+        </div>
+
+       
 
         <button class="buyBtn">Buy</button>
     </div>
@@ -55,41 +70,40 @@ export default {
         align-items: center;
     }
 
-    .data h2 {
-        font-family: 'Poppins';
+    .showTitle {
+        font-family: 'Inter';
         font-style: normal;
         font-weight: 800;
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 35px;
+        line-height: 42px;
         text-align: center;
         letter-spacing: 0.0231818px;
 
         color: #FFFFFF;
 
-        text-shadow: 2px 2px 10px #B149F1;
+
+        text-shadow: 2px 2px 10px #00D8E7;
     }
 
-    .data p {
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 15px;
-        line-height: 21px;
-        /* identical to box height */
-
-        text-align: center;
-        letter-spacing: 0.0231818px;
-
-        color: #FFFFFF;
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 30px;
     }
 
-    .location {
+    .infoBox {
         display: flex;
         align-items: center;
         margin: 7px 0;
+        width: 100%;
     }
 
-    .location p {
+    .spaceBetween {
+        justify-content: space-between;
+    }
+
+    .infoText {
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 300;
@@ -97,6 +111,7 @@ export default {
         line-height: 22px;
         /* identical to box height */
 
+        text-align: center;
         letter-spacing: 0.0231818px;
 
         color: #FFFFFF;
@@ -107,13 +122,14 @@ export default {
     .nft {
         display: block;
         margin: 15px auto;
+        filter: drop-shadow(2px 2px 10px #3F74FF);
         
     }
 
     .buyBtn {
         width: 198px;
         height: 43px;
-        margin: auto;
+        margin: 23px auto;
         display: block;
         background: linear-gradient(90deg, #3F74FF 0%, #00D8E7 96.51%);
         border-radius: 5px;
@@ -131,6 +147,23 @@ export default {
     .buyBtn:active {
         opacity: .5;
 
+    }
+
+    .infoAncor {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        /* identical to box height */
+
+
+        color: #60A9D2;
+    }
+
+    .infoBox--SubContainer {
+        display: flex;
+        align-items: center;
     }
 
 </style>
