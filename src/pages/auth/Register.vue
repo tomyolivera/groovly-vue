@@ -12,12 +12,10 @@
     </div>
 </template>
 
-<script lang="tsx">
+<script setup lang="tsx">
 import Form from '../../components/Form.vue'
 
-export default {
-    
-}
+
 </script>
 
 <style scoped>

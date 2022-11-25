@@ -37,14 +37,10 @@
   
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { Icon } from '@iconify/vue';
 
-export default {
-    components: {
-        Icon
-    }
-}
+
 </script>
 
 <style>
