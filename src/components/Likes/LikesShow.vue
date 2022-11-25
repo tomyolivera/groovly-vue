@@ -4,12 +4,11 @@
     </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 
-export default {
-    data() {
-        return {
-            likes: [
+    import { $ref } from 'vue/macros';
+
+    const likes = $ref([
                 {
                     name: "Solomun",
                     image: "../../assets/img/solomun.jpg",
@@ -37,10 +36,7 @@ export default {
                     },
                     location: "Los Angeles, USA",
                 },
-            ]
-        }
-    },
-}
+            ])
 
 </script>
 
