@@ -4,21 +4,18 @@
     <component :is="Component" />
   </transition>
 </router-view>
-<splashScreen v-if="loading" />
+<splashScreen v-if="loading.state" />
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { onMounted } from 'vue'
+const loading = $ref({state: true})
 
-    export default {
-        name: "app",
-        data: () => ({
-            loading: true
-        }),
-        mounted() {
-            setTimeout(() => {
-                this.loading = false
-            }, 3000)
-        }
-    }
+onMounted(() => {
+  setTimeout(() => {
+    loading.state = false
+  }, 2000)
+})
+
 </script>
 
