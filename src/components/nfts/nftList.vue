@@ -1,32 +1,21 @@
 <template>
   <div class="nftsContainer">
     
-    <div v-for="nft in nftsList" :key="nft.id">
+    <div v-for="nft in nfts" :key="nft.id">
         <nft-card :nft="nft"/>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import { NftInterface } from '@/interfaces/NftInterface';
-import nftCard from './nftCard.vue';
+<script setup lang="ts">
+    import { NftInterface } from '@/interfaces/NftInterface';
 
-
-export default {
-  components: { nftCard },
-    props: {
+    const {nfts} = defineProps({
         nfts: {type: Object as () => NftInterface[]},
-        active: {type: Boolean},
-    },
-    setup(props) {
-        
-      
-        
-        return {
-            nftsList: props.nfts?.filter(nft => nft.active === props.active)
-        }
-    }
-}
+    })
+
+    console.log(nfts)
+
 
 </script>
 

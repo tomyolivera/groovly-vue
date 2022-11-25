@@ -7,15 +7,17 @@
   
 </template>
 
-<script lang="tsx">
-export default {
-    props: {
+<script setup lang="ts">
+
+    import { defineProps } from 'vue'; // Sin import lanza error --IsolatedModules
+
+    defineProps({
         price: {type: Number, required: true}
-    }
-}
+    })
+
 </script>
 
-<style>
+<style scoped>
 
     .wrapBox {
         border: 1px solid;

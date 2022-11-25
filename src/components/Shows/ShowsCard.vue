@@ -5,36 +5,27 @@
             <like-btn/>
             <div class="info">
                 <h4>{{data?.title}}</h4>
-                <p>{{date}}</p>
+                <p>{{date()}}</p>
             </div>
         </div>
     </router-link>
 
 </template>
 
-<script lang="tsx">
-import { ShowInterface } from '@/interfaces/ShowInterface';
-import moment from 'moment';
-import LikeBtn from './LikeBtn.vue';
+<script setup lang="ts">
+    import { ShowInterface } from '@/interfaces/ShowInterface';
+    import moment from 'moment';
 
-
-export default {
-    name: 'ShowsCard',
-
-        LikeBtn,    
-        props: {
+    const {data} = defineProps({
         data: {
             type: Object as () => ShowInterface
         }
-    },
-    computed: {
-        date() {
-            
-            return moment(this.data?.date).format('D MMMM, YYYY');
-        }
+    })
+
+    const date = () => {
+        return moment(data?.date).format('D MMMM, YYYY');
     }
 
-}
 
 </script>
 <style scoped>

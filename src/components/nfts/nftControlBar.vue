@@ -1,21 +1,33 @@
 <template>
     <div class="toolsBox" >
-        <button :class="active ? 'button active' : 'button'" @click="changeActive(true)">
+        <button :class="active.state ? 'button active' : 'button'" @click="toggle()">
             Upcoming
         </button>
-        <button :class="!active ? 'button active' : 'button'" @click="changeActive(false)">
+        <button :class="!active.state ? 'button active' : 'button'" @click="toggle()">
             <p>Passed</p>
         </button>
     </div>
 </template>
 
-<script lang="ts">
-export default {
-    props: {
-        active: {type: Boolean, required: true},
-        changeActive: {type: Object as (option:boolean) => void, required: true}
+<script setup lang="ts">
+
+    import { defineProps } from 'vue';
+
+    interface IProps {
+        changeActive: (option:boolean) => void
     }
-}
+
+    const active = $ref({state: true})
+
+    const {changeActive} = defineProps<IProps>()
+
+    const toggle = () => {
+        
+        active.state = !active.state
+        changeActive(active.state)
+    }
+
+
 </script>
 
 <style>

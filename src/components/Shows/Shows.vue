@@ -11,22 +11,19 @@
     
 </template>
 
-<script lang="tsx">
+<script setup lang="ts">
 import { ShowInterface } from '@/interfaces/ShowInterface';
-import ShowsCard from './ShowsCard.vue';
 
-export default {
-  components: { ShowsCard },
-    name: 'Shows',
-    props: {
+defineProps({
         shows: {
             type: Object as () => ShowInterface[],
         },
         showsListName: {
             type: String
         }
-    }
-}
+})
+
+
 
 </script>
 <style scoped>

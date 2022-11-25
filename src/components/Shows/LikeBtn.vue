@@ -1,35 +1,29 @@
 <template lang="">
-    <v-btn class="containerLike" @click="isLiked = !isLiked">
+    <v-btn class="containerLike" @click="toggleLike">
         <Icon icon="bi:heart-fill" :color="color" width="13" height="13"/>
     </v-btn>
 </template>
 
-<script lang="tsx">
-import { Icon } from '@iconify/vue';
+<script setup lang="ts">
+    import { Icon } from '@iconify/vue';
+    import { computed } from 'vue-demi';
 
-export default {
-    name: 'LikeBtn',
-    props: {
-        id: {
-            type: String,
-        }
-    },
-    data: () => {
-        return {
-            isLiked: true,
-        }
-    },
-    computed: {
-        color() {
-            return this.isLiked ? "var(--main-color)" : "#FEFDFF"
-        }
-    },
-    components: {
-		Icon,
-	},
-    
+    defineProps({
+        id: { type: String }
+    })
 
-}
+    const isLiked = $ref<{state: boolean}>({state: false})
+
+    const toggleLike = () => {
+        isLiked.state = !isLiked.state
+    }    
+
+    const color = computed(() => {
+        return isLiked.state ? "var(--main-color)" : "#FEFDFF"
+    })
+
+
+
 </script>
 
 <style scoped>

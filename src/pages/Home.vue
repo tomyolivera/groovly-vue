@@ -11,21 +11,13 @@
 
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 
+import { ShowInterface } from '@/interfaces/ShowInterface.js'
 import { dbShows } from '../lib/dbShows.js'
 
+const showsList = $ref<ShowInterface[]>(dbShows)
 
-
-
-export default {
-
-    data: () => {
-        return {
-            showsList: dbShows
-        }
-    }
-}
 </script>
 
 <style scoped>

@@ -1,29 +1,28 @@
 <template>
   <div class="container"> 
     <h1 class="heading">Your NFTs</h1>
-    <nft-control-bar :active="active" :changeActive="toogleList"/>
-    <nft-list :nfts="nfts" :active="active"/>
+    <nft-control-bar :changeActive="toogleList"/>
+    <nft-list :nfts="nfts.nftsList"/>
   </div>
 </template>
 
-<script lang="ts">
-import { dbNfts } from '@/lib/dbNft';
+<script setup lang="ts">
+  import { dbNfts } from '@/lib/dbNft';
+  import { onBeforeMount } from 'vue-demi';
 
-export default {
-  data: () => {
-    return {
-      nfts: dbNfts,
-      active: true
-    }
-  },
-  methods: {
-    toogleList(option:boolean) {
-      console.log(option);
-      
-      this.active = option
-    }
+  const nfts = $ref({nftsList: dbNfts})
+
+  const toogleList = (option = true) => {
+    console.log(option);
+
+    nfts.nftsList = dbNfts.filter(nft => nft.active === option)
+
   }
-}
+
+  onBeforeMount(() => {
+    toogleList()
+  })
+
 </script>
 
 <style>

@@ -21,18 +21,17 @@
   </div>
 </template>
 
-<script lang="ts">
-import { NftInterface } from '@/interfaces/NftInterface'
-import { Icon } from '@iconify/vue';
-export default {
-    props: {
+<script setup lang="ts">
+    import { NftInterface } from '@/interfaces/NftInterface'
+    import { Icon } from '@iconify/vue';
+
+    defineProps({
         nft: {
             type: Object as () => NftInterface,
             required: true
         }
-    },
-    components: { Icon }
-}
+    })
+
 </script>
 
 <style>
