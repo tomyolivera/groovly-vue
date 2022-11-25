@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
     
-    const props = defineProps({
+    defineProps({
         placeholder: {
             type: String,
             default: 'placeholder'

@@ -10,13 +10,15 @@
 
 <script setup lang="ts">
 
-var selected = 0;
+    import { Icon } from '@iconify/vue';
+
+    var selected = 0;
 
     const onClick = (index: number) => {
         selected = index
     }
 
-}
+
 </script>
 
 <style scoped>

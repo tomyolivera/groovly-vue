@@ -1,30 +1,19 @@
 <template>
     <div class="inputBox">
         <Icon icon="ion:search" color="grey" class="inputIcon"/>
-        <input type="text" class="inputSearch" placeholder="Find band, artist, genre..." v-model="searching" v-on:input="search"/>
+        <input type="text" class="inputSearch" placeholder="Find band, artist, genre..." v-model="searching.inpt" v-on:input="search"/>
     </div>
 </template>
 
-<script lang="ts">
-import { Icon } from '@iconify/vue';
+<script setup lang="ts">
+    import { Icon } from '@iconify/vue';
 
-export default {
-    name: 'SearchBar',
-    data() {
-        return {
-            searching: ''
-        }
-    },
-    methods: {
-        search() {
-            console.log(this.searching);
-        }
-    },
-    components: {
-        Icon
+    const searching = $ref({inpt: ''})
+
+    const search = () => {
+        console.log(searching.inpt);
     }
 
-}
 </script>
 
 <style>

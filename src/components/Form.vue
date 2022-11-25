@@ -6,7 +6,9 @@
 
 <script setup lang="ts">
 
-    const props = defineProps({
+    import { defineProps } from 'vue-demi'
+
+    defineProps({
         placeholder: {
             type: String,
             required: true
