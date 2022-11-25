@@ -1,7 +1,7 @@
 <template>
     <router-link to="/shows/{{data.id}}">
 
-        <div class="bg" v-bind:style="{ backgroundImage: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 44.79%, rgba(142, 58, 237, 0.4) 100%), url(' + data?.image + ')' }">
+        <div class="bg" v-bind:style="{ backgroundImage: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 44.79%, rgba(63, 116, 255, 0.4) 100%), url(' + data?.image + ')' }">
             <like-btn/>
             <div class="info">
                 <h4>{{data?.title}}</h4>
