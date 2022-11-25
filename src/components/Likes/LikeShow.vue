@@ -118,7 +118,5 @@
         color: #F9FAFC;
     }
 
-    .rectangle {
-        
-    }
+    
 </style>

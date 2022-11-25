@@ -1,42 +1,42 @@
-<template lang="">
-    <button class="music-btn" @click="onClick" :id="isSelected ? 'btn-selected':''" >
-    <Icon class="music-icon"  :icon="icon" :color="isSelected ? '#FFFFFF':'var(--main-color-dark)'"/>
+<template>
+    <button class="music-btn" @click="onClick" :id="isSelected.state ? 'btn-selected':''" >
+    <Icon class="music-icon"  :icon="icon" :color="isSelected.state ? '#FFFFFF':'var(--main-color-dark)'"/>
     <h4 class="text">{{text}}</h4>
     </button>
 </template>
 
 <script setup lang="ts">
-import { Icon } from '@iconify/vue';
-import { defineProps } from 'vue';
+    import { Icon } from '@iconify/vue';
+    import { defineProps } from 'vue';
 
-const isSelected = $ref({state:false});
+    const isSelected = $ref({state:false});
 
-const props = defineProps({
-    text: {
-        type: String,
-        required: true
-    },
-    icon: {
-        type: String,
-        required: true
-    },
-    likeList: {
-        type: Array,
-        required: true
-    }
-})
-
-
-        const onClick = () => {
-            isSelected.state = !isSelected.state
-
-            if (isSelected.state) {
-                props.likeList.push(props.text)
-            } else {
-                props.likeList.splice(props.likeList.indexOf(props.text), 1)
-            }
-            console.log(props.likeList)
+    const props = defineProps({
+        text: {
+            type: String,
+            required: true
+        },
+        icon: {
+            type: String,
+            required: true
+        },
+        likeList: {
+            type: Array,
+            required: true
         }
+    })
+
+
+    const onClick = () => {
+        isSelected.state = !isSelected.state
+
+        if (isSelected.state) {
+            props.likeList.push(props.text)
+        } else {
+            props.likeList.splice(props.likeList.indexOf(props.text), 1)
+        }
+        console.log(props.likeList)
+    }
     
 
 </script>
