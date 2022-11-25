@@ -11,7 +11,7 @@
         <div class="rectangle"></div>
     </div>
 </template>
-<script lang="tsx">
+<script lang="ts">
 export default {
     props: {
         like: {

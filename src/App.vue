@@ -7,7 +7,7 @@
 <splashScreen v-if="loading" />
 </template>
 
-<script>
+<script lang="ts">
 
     export default {
         name: "app",

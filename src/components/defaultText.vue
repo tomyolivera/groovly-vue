@@ -2,7 +2,7 @@
     <h4 class="text">{{text}}</h4>
 </template>
 
-<script lang="tsx">
+<script lang="ts">
 export default {
     name: 'defaultText',
     props: {

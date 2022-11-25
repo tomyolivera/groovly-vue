@@ -11,7 +11,7 @@
 
 </template>
 
-<script lang="tsx">
+<script lang="ts">
 
 import { dbShows } from '../lib/dbShows.js'
 

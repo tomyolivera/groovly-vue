@@ -37,7 +37,7 @@
   
 </template>
 
-<script lang="tsx">
+<script lang="ts">
 import { Icon } from '@iconify/vue';
 
 export default {

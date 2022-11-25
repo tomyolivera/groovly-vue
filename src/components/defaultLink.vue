@@ -3,7 +3,7 @@
     <router-link :to="to" ><p class="link">{{text}}</p></router-link >
 </template>
 
-<script lang="tsx">
+<script lang="ts">
 export default {
     name: 'defaultLink',
     props: {

@@ -2,7 +2,7 @@
     <router-link :to="to" class="btn" ><span class="btn-text">{{text}}</span></router-link >
 </template>
 
-<script lang="tsx">
+<script lang="ts">
 export default {
     name: 'defaultBtn',
     props: {

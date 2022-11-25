@@ -4,7 +4,7 @@
     </form>
 </template>
 
-<script lang="tsx">
+<script lang="ts">
 export default {
     name: 'Form',
     props: {

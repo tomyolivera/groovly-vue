@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script lang="tsx">
+<script lang="ts">
 
 export default {
   
